@@ -11,4 +11,8 @@ const courses = require("./data/courseName.json");
 app.get("/categories", (req, res) => {
     res.send(categories);
   });
-  
+
+// api for loading all courses
+app.get("/courses", (req, res) => {
+  res.send(courses);
+});
