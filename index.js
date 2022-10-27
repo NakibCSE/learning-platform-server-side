@@ -43,3 +43,11 @@ app.get("/course/:id", (req, res) => {
     const selectedCourse = courses.find((n) => n._id === id);
     res.send(selectedCourse);
   });
+
+  app.get("/", (req, res) => {
+    res.send("Hello BootCamp learner");
+  });
+  
+  app.listen(port, () => {
+    console.log(`Boot camp learner ${port}`);
+  });
