@@ -28,3 +28,18 @@ app.get("/category/:id", (req, res) => {
       res.send(selectCategory);
     }
   });
+
+
+  
+// api for showing details of  a course
+app.get("/course/:id", (req, res) => {
+    const id = req.params.id;
+    const selectedCourse = courses.find((n) => n._id === id);
+    res.send(selectedCourse);
+  });
+  // api for showing checkout of  a course
+  app.get("/check/:id", (req, res) => {
+    const id = req.params.id;
+    const selectedCourse = courses.find((n) => n._id === id);
+    res.send(selectedCourse);
+  });
